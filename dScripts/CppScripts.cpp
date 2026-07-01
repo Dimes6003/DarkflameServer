@@ -277,7 +277,11 @@
 #include "MonCoreNookDoors.h"
 #include "MonCoreSmashableDoors.h"
 #include "FlameJetServer.h"
-#include "LightningOrbServer.h"
+#include "NjEarthPillars.h"
+#include "NjLightningOrb.h"
+#include "NjFireRocks.h"
+#include "NjFireRocksManager.h"
+#include "SimpleMoverSwitch.h"
 #include "BurningTile.h"
 #include "NjEarthDragonPetServer.h"
 #include "NjEarthPetServer.h"
@@ -635,7 +639,11 @@ namespace {
 		{"scripts\\02_server\\Map\\njhub\\L_MON_CORE_SMASHABLE_DOORS.lua", []() {return new MonCoreSmashableDoors();}},
 		{"scripts\\02_server\\Map\\njhub\\L_MON_CORE_SMASHABLE_DOORS.lua", []() {return new MonCoreSmashableDoors();}},
 		{"scripts\\02_server\\Map\\njhub\\L_FLAME_JET_SERVER.lua", []() {return new FlameJetServer();}},
-		{"scripts\\02_server\\Map\\njhub\\L_LIGHTNING_ORB_SERVER.lua", []() {return new LightningOrbServer();}},
+		{"scripts\\02_server\\Map\\njhub\\L_EARTH_TRANS_PILLARS.lua", []() {return new NjEarthPillars();}},
+		{"scripts\\02_server\\Map\\njhub\\L_LIGHTNING_ORB_SERVER.lua", []() {return new NjLightningOrb();}},
+		{"scripts\\02_server\\Map\\njhub\\L_FIRE_TRANS_ROCKS.lua", []() {return new NjFireRocks();}},
+		{"scripts\\02_server\\Map\\njhub\\L_FIRE_TRANS_ROCKS_MANAGER.lua", []() {return new NjFireRocksManager();}},		
+		{"scripts\\02_server\\Map\\General\\L_SIMPLE_MOVER_SWITCH.lua", []() {return new SimpleMoverSwitch();}},
 		{"scripts\\02_server\\Map\\njhub\\L_BURNING_TILE.lua", []() {return new BurningTile();}},
 		{"scripts\\02_server\\Map\\njhub\\L_SPAWN_EARTH_PET_SERVER.lua", []() {return new NjEarthDragonPetServer();}},
 		{"scripts\\02_server\\Map\\njhub\\L_EARTH_PET_SERVER.lua", []() {return new NjEarthPetServer();}},

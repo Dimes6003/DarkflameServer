@@ -101,14 +101,16 @@ namespace GameMessages {
 
 	void SendPlayerSetCameraCyclingMode(const LWOOBJID& objectID, const SystemAddress& sysAddr, bool bAllowCyclingWhileDeadOnly = true, eCyclingMode cyclingMode = eCyclingMode::ALLOW_CYCLE_TEAMMATES);
 
+	void SendStopNDAudioEmitter(Entity* entity, const SystemAddress& sysAddr, std::string audioGUID);
 	void SendPlayNDAudioEmitter(Entity* entity, const SystemAddress& sysAddr, std::string audioGUID);
 
 	void SendStartPathing(Entity* entity);
 
-	// special is for the FV tree platform, feature is complete if we just do that so meh
 	void SendPlatformResync(Entity* entity, const SystemAddress& sysAddr, bool bStopAtDesiredWaypoint = false,
 		int iIndex = 0, int iDesiredWaypointIndex = 1, int nextIndex = 1,
-		eMovementPlatformState movementState = eMovementPlatformState::Moving, bool special = false);
+		eMovementPlatformState movementState = eMovementPlatformState::Moving, 
+		float fPercentBetweenPoints = 0.0f, float fIdleTimeElapsed = 0.0f, 
+		float fMoveTimeElapsed = 0.0f, bool bReverse = false);
 
 	void SendResetMissions(Entity* entity, const SystemAddress& sysAddr, const int32_t missionid = -1);
 	void SendRestoreToPostLoadStats(Entity* entity, const SystemAddress& sysAddr);

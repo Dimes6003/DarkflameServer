@@ -204,9 +204,9 @@ public:
 
 	// Adds a timer to start next frame with the given name and time.
 	void AddTimer(const std::string& name, float time);
-	void AddCallbackTimer(float time, const std::function<void()> callback);
+	void AddCallbackTimer(float time, const std::function<void()> callback, uint32_t id = 0);
 	bool HasTimer(const std::string& name);
-	void CancelCallbackTimers();
+	void CancelCallbackTimers(uint32_t id = 0);
 	void CancelAllTimers();
 	void CancelTimer(const std::string& name);
 
